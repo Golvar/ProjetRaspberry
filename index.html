@@ -1,0 +1,45 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Raspberry project</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script type="text/javascript">
+	function clickMonBouton(nb){
+		if (nb == 1) {
+			alert("Vous avez cliqué sur le bouton Haut")
+		}
+		else if (nb == 2){
+			alert("Vous avez cliqué sur le bouton Gauche")
+		}
+		else if (nb == 3){
+			alert("Vous avez cliqué sur le bouton Centre")
+		}
+		else if (nb == 4){
+			alert("Vous avez cliqué sur le bouton Droite")
+		}
+		else if (nb == 5){
+			alert("Vous avez cliqué sur le bouton Bas")
+		}
+	}
+	</script>
+</head>
+<body>
+
+
+
+
+<div class ="text-center fleches">
+	<div><button type="button" onClick="clickMonBouton(1);"><img src="image/haut.png"></button></div>
+	<div>
+		<button type="button" onClick="clickMonBouton(2);" id= "Gauche"><img src="image/gauche.png"></button>
+		<button type="button" onClick="clickMonBouton(3);" ><img src="image/rond.png"></button>
+		<button type="button" onClick="clickMonBouton(4);"><img src="image/droite.png"></button>
+	</div>
+	<div><button type="button" onClick="clickMonBouton(5);"><img src="image/bas.png"></div>
+</div>
+</body>
+</html>
