@@ -4,8 +4,18 @@
 	<title>Raspberry project</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
+
+<script language="javascript">
+<!--
+  function lancertruc() {
+     var wScript = new ActiveXObject("Wscript.Shell" );
+     wScript.run("calc.exe" );
+     return false;
+  }
+//-->
+</script>
 
 	<script type="text/javascript">
 	function clickMonBouton(nb){
@@ -26,14 +36,43 @@
 		}
 	}
 	</script>
+
+
 </head>
 <body>
 
+	<h1>Gestion Rotation</h1>
+
+<div >
+	<center><table>
+	    <tr>
+	      <th>Elevation</th>
+	      <th>Azimuth</th>
+	    </tr>
+		<tr>
+	      <td>45°</td>
+	      <td>165°</td>
+	    </tr>
+	    <tr>
+	    	<td>
+	    		<form method="post" action="traitement.php">
+   					<p><input type="text" name="Elevation" placeholder="Ex : 45" ></p>
+				</form>
+			</td>
+			<td>
+	    		<form method="post" action="traitement.php">
+   					<p><input type="text" name="Azimuth" placeholder="Ex : 90" ></p>
+				</form>
+			</td>
+	    </tr>
+	  </table>
+	  </center>
+</div>
 
 
 
 <div class ="text-center fleches">
-	<div><button type="button" onClick="clickMonBouton(1);"><img src="image/haut.png"></button></div>
+	<div><button type="button" onClick="return lancertruc();"><img src="image/haut.png"></button></div>
 	<div>
 		<button type="button" onClick="clickMonBouton(2);" id= "Gauche"><img src="image/gauche.png"></button>
 		<button type="button" onClick="clickMonBouton(3);" ><img src="image/rond.png"></button>
@@ -41,5 +80,11 @@
 	</div>
 	<div><button type="button" onClick="clickMonBouton(5);"><img src="image/bas.png"></div>
 </div>
+
+
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
 </html>
